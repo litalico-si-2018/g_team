@@ -1,7 +1,6 @@
-# g_team
-名前 : 堀田大地（堀田大地）
-大学 :  電気通信大学
-出身地 :  愛媛
-得意な技術 :  深層学習, Vue, GraphQL, firebaseを使ってみたい！
-3日間の意気込み :  いくぞ！がんばっぺ！
-この3日間で学びたい事 :  満足のいく設計
+# Usage
+1.  `docker-machine create --driver virtualbox rails52`
+    (1). `docker-machine start rails52`
+2.  `eval $(docker-machine env rails52)`
+3.  `docker-compose up --build -d`
+4.  `docker-machine ssh rails52 -L 8080:localhost:9000`
