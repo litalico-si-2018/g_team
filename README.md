@@ -1,3 +1,13 @@
+
+# g_team
+
+名前 :野口勇気
+大学 : 筑波大学大学院
+出身地 : 佐賀
+得意な技術 : 深層学習
+3日間の意気込み : やるからには最高のものを！！
+この3日間で学びたい事 : チーム開発の円滑な進めたかなどを身につけていきたいです。
+
 # Usage
 1.  `docker-machine create --driver virtualbox rails52`
     (1). `docker-machine start rails52`
