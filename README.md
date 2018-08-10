@@ -21,3 +21,6 @@
 4.  `docker-machine ssh rails52 -L 8080:localhost:9000`
 5.  `docker exec -it rails_template_web_1 bash`
 6.  `rails db:create`
+
+色々
++ `bundle install --path vendor/bundler`
