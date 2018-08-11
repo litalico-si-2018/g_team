@@ -6,5 +6,7 @@ class ArticlesController < ApplicationController
     # @child = Child.find_by(id: child_id)
     # user_id = child.user_id
     # @user = User.find_by(id: user_id)
+
+    @comments = Comment.where(article_id: params[:id])
   end
 end
