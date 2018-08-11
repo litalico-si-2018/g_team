@@ -1,0 +1,9 @@
+one:
+  article_id: 1
+  text: MyText
+  user_id: 1
+
+two:
+  article_id: 1
+  text: MyText
+  user_id: 1

@@ -26,13 +26,23 @@ end
   )
 end
 
-
+# article
 for i in 1..11 do
   Article.create(
     title: "タイトル#{i.to_s}",
     child_id: i,
     subject_id: i,
     text: "本文です#{i.to_s}"
+  )
+end
+
+# comment
+200.times do |n|
+  comment = Faker::Lorem.sentence
+  Comment.create!(
+      article_id: rand(10),
+      text: comment,
+      user_id: rand(200)
   )
 end
 
