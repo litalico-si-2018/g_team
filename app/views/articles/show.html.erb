@@ -2,13 +2,19 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <h1><%= @article.title %></h1>
-    <pre><%= @article.text %></pre>
+    <article class="">
+      <h1><%= @article.title %></h1>
+      <h2><%= @user.name %></h2>
+      <pre><%= @article.text %></pre>
+    </article>
     <!-- 以下、コメント -->
-    <% @comments.each do |comment| %>
-    <!-- 繰り返し -->
-      <h3><%= User.find_by(id: comment.user_id) %></h3>
-      <pre><%= comment.text %></pre>
-    <!-- ここまで -->
-    <% end %>
+    <div class="">
+      <h3>コメント</h3>
+      <% @comments.each do |comment| %>
+      <!-- 繰り返し -->
+        <h4><%= User.find_by(id: comment.user_id).name %></h3>
+        <pre><%= comment.text %></pre>
+      <!-- ここまで -->
+      <% end %>
+    </div>
   </body>
