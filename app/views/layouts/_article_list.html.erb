@@ -1,7 +1,7 @@
 <article class="">
   <% @lists.each do |list| %>
   <!-- 繰り返し -->
-    <h2><%= list.title %></h2>
+    <h2><%= link_to(list.title, article_path(list.id)) %></h2>
   <!-- ここまで -->
   <% end %>
 </article>
