@@ -1,7 +1,13 @@
-<article class="">
-  <% @lists.each do |list| %>
-  <!-- 繰り返し -->
-    <h2><%= link_to(list.title, article_path(list.id)) %></h2>
-  <!-- ここまで -->
-  <% end %>
-</article>
+<% @lists.each do |list| %>
+  <article class="row" style="margin:0 auto;">
+    <div class="col-sm-2">
+      <%= image_tag("sibaken.jpg", size: "80x80",class: "avatar") %>
+    </div>
+    <div class="col-sm-8">
+      <p class="title"><%= link_to(list.title, article_path(list.id)) %></p>
+      <time datetime="<%= list.created_at %>">
+        <%= "by #{list.child.user.name} #{time_ago_in_words(list.created_at)} ago" %>
+      </time>
+    </div>
+  </article>
+<% end %>

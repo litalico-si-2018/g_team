@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_11_091235) do
+ActiveRecord::Schema.define(version: 2018_08_11_111754) do
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "title"
@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 2018_08_11_091235) do
 
   create_table "children", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "gakunen_id"
     t.integer "gender_id"
     t.float "char_ochitsuki"
     t.datetime "created_at", null: false
@@ -33,6 +32,7 @@ ActiveRecord::Schema.define(version: 2018_08_11_091235) do
     t.float "char_kyomi"
     t.float "char_sukinamono"
     t.float "char_kyocho"
+    t.integer "grade_id"
   end
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
