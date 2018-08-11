@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 for i in 1..11 do
   Article.create(
-    :title => "タイトル"+i.to_s,
-    :child_id => i,
-    :subject_id => i,
-    :text => "本文です"+i.to_s
+    title: "タイトル#{i.to_s}",
+    child_id: i,
+    subject_id: i,
+    text: "本文です#{i.to_s}"
   )
 end
