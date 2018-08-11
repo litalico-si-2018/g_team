@@ -14,6 +14,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass'
 gem 'material-sass', '~> 4.1.1'
 gem 'material_icons'
+gem 'autoprefixer-rails', '~> 9.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
