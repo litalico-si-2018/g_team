@@ -1,4 +1,17 @@
 <% provide(:title, @article.title) %>
-<h1><%= @article.title %></h1>
-<pre><%= @article.text %></pre>
-<p><%= @child %></p>
+<!DOCTYPE html>
+<html>
+  <body>
+    <article class="">
+      <h1><%= @article.title %></h1>
+      <h2><%= @article.child.user.name %></h2>
+      <pre><%= @article.text %></pre>
+    </article>
+    <div class="">
+      <h3>コメント</h3>
+      <% @comments.each do |comment| %>
+        <h4><%= comment.user.name %></h3>
+        <pre><%= comment.text %></pre>
+      <% end %>
+    </div>
+  </body>

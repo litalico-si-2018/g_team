@@ -52,3 +52,13 @@ for i in 1..11 do
     text: "本文です#{i.to_s}"
   )
 end
+
+# comment
+200.times do |n|
+  comment = Faker::Lorem.sentence
+  Comment.create!(
+      article_id: rand(10),
+      text: comment,
+      user_id: rand(200)
+  )
+end
