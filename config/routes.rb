@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :articles
   root :to => 'static_pages#home'
   get '/help', to: 'static_pages#help'
   get '/articles/:id', to: 'articles#show'
@@ -7,4 +6,6 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   resources :users
+  resources :articles
+  resources :grades
 end
