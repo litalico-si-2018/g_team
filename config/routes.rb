@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   root :to => 'static_pages#home'
   get '/help', to: 'static_pages#help'
-  get '/signup', to: 'users#create'
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+  resources :users
 end

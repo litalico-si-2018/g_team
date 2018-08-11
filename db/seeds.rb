@@ -25,17 +25,3 @@ grades = Array['1', '2', '3', '4', '5', '6']
 for grade in grades do
   Grade.create(name: grade)
 end
-
-# user
-200.times do |n|
-  name = Faker::Japanese::Name.name
-  email = "example-#{n+1}@railstutorial.org"
-  password = "a"*10
-  password_digest = password
-  User.create!(
-    name: name,
-    email: email,
-    password: password,
-    password_confirmation: password_digest
-  )
-end
