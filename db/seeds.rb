@@ -57,8 +57,8 @@ end
 200.times do |n|
   comment = Faker::Lorem.sentence
   Comment.create!(
-      article_id: rand(10),
+      article_id: rand(1..10),
       text: comment,
-      user_id: rand(200)
+      user_id: rand(1..200)
   )
 end
