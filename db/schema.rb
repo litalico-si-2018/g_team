@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_11_044547) do
+
+ActiveRecord::Schema.define(version: 2018_08_11_053349) do
+
+  create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "title"
+    t.integer "child_id"
+    t.integer "subject_id"
+    t.text "text"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "title"
@@ -26,6 +36,29 @@ ActiveRecord::Schema.define(version: 2018_08_11_044547) do
     t.integer "gakunen_id"
     t.integer "gender_id"
     t.float "char_ochitsuki"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "char_gakuryoku"
+    t.float "char_syuchu"
+    t.float "char_kyomi"
+    t.float "char_sukinamono"
+    t.float "char_kyocho"
+  end
+
+  create_table "genders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "grades", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
