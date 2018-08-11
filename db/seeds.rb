@@ -1,4 +1,32 @@
-# article
+# user
+password = "a"*10
+200.times do |n|
+  name = Faker::Japanese::Name.name
+  email = "example-#{n+1}@litalico.jp"
+  User.create!(
+      name: name,
+      email: email,
+      password: password,
+      password_confirmation: password
+  )
+end
+
+# child
+400.times do
+  Child.create(
+      user_id: rand(1..200),
+      gakunen_id: rand(1..6),
+      gender_id: rand(1..2),
+      char_gakuryoku: rand(0.0..1.0),
+      char_ochitsuki: rand(0.0..1.0),
+      char_syuchu: rand(0.0..1.0),
+      char_kyomi: rand(0.0..1.0),
+      char_sukinamono: rand(0.0..1.0),
+      char_kyocho: rand(0.0..1.0)
+  )
+end
+
+
 for i in 1..11 do
   Article.create(
     title: "タイトル#{i.to_s}",
