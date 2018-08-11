@@ -81,6 +81,9 @@ GEM
     crass (1.0.4)
     erubi (1.7.1)
     execjs (2.7.0)
+    faker (1.9.1)
+      i18n (>= 0.7)
+    faker-japanese (0.0.1)
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -215,6 +218,8 @@ DEPENDENCIES
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
   coffee-rails (~> 4.2)
+  faker
+  faker-japanese
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
