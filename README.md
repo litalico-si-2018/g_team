@@ -14,13 +14,10 @@
 この3日間で学びたい事 : チーム開発の円滑な進めたかなどを身につけていきたいです。
 
 # Usage
-1.  `docker-machine create --driver virtualbox rails52`
-    (1). `docker-machine start rails52`
-2.  `eval $(docker-machine env rails52)`
-3.  `docker-compose up --build -d`
-4.  `docker-machine ssh rails52 -L 8080:localhost:9000`
-5.  `docker exec -it rails_template_web_1 bash`
-6.  `rails db:create`
+1.  `docker-compose up --build -d`
+2.  `docker-machine ssh rails52 -L 8080:localhost:9000`
+3.  `docker-compose run web rails db:create`
 
-色々
+## 色々
 + `bundle install --path vendor/bundler`
++ `eval $(docker-machine env rails52)`
