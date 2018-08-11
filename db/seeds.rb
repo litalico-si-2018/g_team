@@ -28,7 +28,8 @@ password = "a"*10
       password_confirmation: password
   )
 end
- # child
+
+# child
 400.times do
   Child.create!(
       user_id: rand(1..200),
@@ -57,8 +58,16 @@ end
 200.times do |n|
   comment = Faker::Lorem.sentence
   Comment.create!(
-      article_id: rand(10),
+      article_id: rand(1..10),
       text: comment,
-      user_id: rand(200)
+      user_id: rand(1..200)
+  )
+end
+
+# like
+10.times do |n|
+  Like.create!(
+      article_id: rand(1..10),
+      user_id: rand(1..200)
   )
 end

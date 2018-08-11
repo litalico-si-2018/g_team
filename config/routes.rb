@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :likes, only: [:create, :destroy]
   resources :articles
   root :to => 'static_pages#home'
   get '/help', to: 'static_pages#help'
