@@ -5,5 +5,7 @@ class ArticlesController < ApplicationController
   end
 
   def show_by_grade
+    # TODO: @articleをshow_by_grade viewでも表示
+    # @articles = Article.where(grade: params[:id])
   end
 end
