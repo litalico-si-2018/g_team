@@ -1,4 +1,14 @@
 <% provide(:title, @article.title) %>
-<h1><%= @article.title %></h1>
-<pre><%= @article.text %></pre>
-<p><%= @child %></p>
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1><%= @article.title %></h1>
+    <pre><%= @article.text %></pre>
+    <!-- 以下、コメント -->
+    <% @comments.each do |comment| %>
+    <!-- 繰り返し -->
+      <h3><%= User.find_by(id: comment.user_id) %></h3>
+      <pre><%= comment.text %></pre>
+    <!-- ここまで -->
+    <% end %>
+  </body>
