@@ -49,6 +49,7 @@ for i in 1..11 do
     title: "タイトル#{i.to_s}",
     child_id: rand(1..400),
     subject_id: rand(1..4),
+    grade: rand(1..6),
     text: "本文です#{i.to_s}"
   )
 end
