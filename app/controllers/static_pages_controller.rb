@@ -17,10 +17,12 @@ class StaticPagesController < ApplicationController
       end
       articles = Article.where(child_id: top_match_id)
       # @articles = Article.where(child_id: top_match_id)
+      @lists = @a
+    else
+      @lists = Article.all
     end
 
     # @lists = articles
-    @lists = @a
   end
 
   def help
