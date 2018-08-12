@@ -3,7 +3,7 @@
   <!-- TODO:ajaxでリアルタイム処理 %= form_for(article.likes.find_by(user_id: current_user.id), method: :delete, remote: true) do |f| %-->
   <%= form_for(article.likes.find_by(user_id: current_user.id), method: :delete) do |f| %>
     <%= button_tag(class: "btn btn-default btn-xs") do %>
-      <i class="material-icons small">
+      <i class="material-icons small favorite-color">
         favorite
       </i>
       <%= content_tag :span, "#{article.likes_count}", class: "glyphicon glyphicon-heart" %>
