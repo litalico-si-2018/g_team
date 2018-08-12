@@ -57,8 +57,18 @@ end
 200.times do |n|
   comment = Faker::Lorem.sentence
   Comment.create!(
-      article_id: rand(10),
+      article_id: rand(1..10),
       text: comment,
-      user_id: rand(200)
+      user_id: rand(1..200)
   )
 end
+
+# likes
+users = User.all
+user  = users.first
+articles = Article.all
+article  = articles.first
+gooding = articles[2..50]
+gooders = users[3..40]
+gooding.each { |followed| user.good(followed) }
+gooders.each { |follower| follower.follow(user) }
