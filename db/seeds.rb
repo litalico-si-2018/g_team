@@ -64,8 +64,7 @@ end
   )
 end
 
-<<<<<<< HEAD
-# likes
+# likesaaaa
 users = User.all
 user  = users.first
 articles = Article.all
@@ -74,12 +73,3 @@ gooding = articles[2..50]
 gooders = users[3..40]
 gooding.each { |followed| user.good(followed) }
 gooders.each { |follower| follower.follow(user) }
-=======
-# like
-10.times do |n|
-  Like.create!(
-      article_id: rand(1..10),
-      user_id: rand(1..200)
-  )
-end
->>>>>>> 114846a1f4b329cc272ad691d80642bc0e92465c
