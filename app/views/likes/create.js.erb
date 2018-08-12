@@ -1,0 +1,1 @@
+$("#article-<%= @article.id %> .like").html("<%= escape_javascript(render "likes/like", article: @article) %>");
