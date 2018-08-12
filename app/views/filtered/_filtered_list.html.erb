@@ -12,6 +12,7 @@
       <time datetime="<%= list.created_at %>">
         <%= "by #{list.child.user.name} #{time_ago_in_words(list.created_at)} ago" %>
       </time>
+      <%= render "likes/like", article: list %>
     </div>
   </article>
 <% end %>
