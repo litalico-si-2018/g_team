@@ -5,7 +5,13 @@ class ArticlesController < ApplicationController
   end
 
   def show_by_grade
-    # TODO: @articleをshow_by_grade viewでも表示
-    # @articles = Article.where(grade: params[:id])
+    @g = params[:id]
+    @article_filtered = Article.where(grade: @g)
+  end
+
+  def show_by_subject
+    id = params[:id]
+    @s = Subject.find_by(id: id)
+    @article_filtered = Article.where(subject_id: @s)
   end
 end

@@ -1,1 +1,16 @@
-aa
+<% provide(:title, "#{@g}年生") %>
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="container">
+      <div class="grades">
+        <%= render 'layouts/grades_list' %>
+      </div>
+      <div class="subjects">
+        <%= render 'layouts/subjects_list' %>
+      </div>
+      <div class="articles">
+        <%= render 'filtered/filtered_list' %>
+      </div>
+    </div>
+  </body>

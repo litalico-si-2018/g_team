@@ -1,4 +1,4 @@
-<% provide(:title, "Home") %>
+<% provide(:title, "#{@s.name}") %>
 <!DOCTYPE html>
 <html>
   <body>
@@ -10,7 +10,7 @@
         <%= render 'layouts/subjects_list' %>
       </div>
       <div class="articles">
-        <%= render 'layouts/article_list' %>
+        <%= render 'filtered/filtered_list' %>
       </div>
     </div>
   </body>
