@@ -7,6 +7,7 @@ class User < ApplicationRecord
         uniqueness: {case_sensitive: false}
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
+<<<<<<< HEAD
   has_many :active_likes, class_name:  "Like",
                                   foreign_key: "article_id",
                                   dependent:   :destroy
@@ -26,4 +27,7 @@ class User < ApplicationRecord
   def gooding?(other_user)
     article.include?(other_user)
   end
+=======
+  has_many :likes, dependent: :destroy
+>>>>>>> 114846a1f4b329cc272ad691d80642bc0e92465c
 end
