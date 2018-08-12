@@ -5,6 +5,10 @@
     </div>
     <div class="col-sm-8">
       <p class="title"><%= link_to(list.title, article_path(list.id)) %></p>
+      <div>学力:<%= list.child.char_gakuryoku.floor(2) %> おちつき度:<%= list.child.char_ochitsuki.floor(2) %>
+        集中力:<%= list.child.char_syuchu.floor(2) %></div>
+      <div>興味の対象:<%= list.child.char_kyomi.floor(2) %> 興味の範囲:<%= list.child.char_sukinamono.floor(2) %>
+        協調性:<%= list.child.char_kyocho.floor(2) %></div>
       <div class="tags">
         <div class="grade badge badge-info"><%= "小学#{list.grade}年生" %></div>
         <div class="subject badge badge-success"><%= list.subject.name %></div>
