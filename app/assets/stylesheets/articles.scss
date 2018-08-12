@@ -1,3 +1,44 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#article {
+  article {
+    margin-top: 5px;
+    width: 80%;
+    height: 120%;
+
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    vertical-align: top;
+    border-bottom: 1px solid #e8e8e8;
+    margin: 0 auto;
+    // .container {
+    //   margin: 0 auto;
+    // }
+  }
+  .comment {
+    .title {
+        padding-top: 60px;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .name {
+      font-size: 1.2em;
+    }
+
+    .time {
+    }
+
+    .avatar {
+      padding: 8px 0;
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    .comment-user {
+      vertical-align: bottom;
+    }
+  }
+}

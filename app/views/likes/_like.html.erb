@@ -1,0 +1,26 @@
+<% if current_user %>
+<span class="like">
+<% if article.iine?(current_user) %>
+  <!-- TODO:ajaxでリアルタイム処理 %= form_for(article.likes.find_by(user_id: current_user.id), method: :delete, remote: true) do |f| %-->
+  <%= form_for(article.likes.find_by(user_id: current_user.id), method: :delete) do |f| %>
+    <%= button_tag(class: "btn btn-default btn-xs") do %>
+      <i class="material-icons small favorite-color">
+        favorite
+      </i>
+      <%= content_tag :span, "#{article.likes_count}", class: "glyphicon glyphicon-heart" %>
+    <% end %>
+  <% end %>
+<% else %>
+  <!-- TODO:ajax %= form_for(article.likes.build, remote: true) do |f| %-->
+  <%= form_for(article.likes.build) do |f| %>
+    <div><%= hidden_field_tag :article_id, article.id %></div>
+    <%= button_tag(class: "btn btn-default btn-xs") do %>
+      <i class="material-icons small">
+        favorite_border
+      </i>
+      <%= content_tag :span, "#{article.likes_count}", class: "glyphicon glyphicon-heart-empty" %>
+    <% end %>
+  <% end %>
+<% end %>
+</span>
+<% end %>
