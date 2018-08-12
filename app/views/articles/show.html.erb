@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <article class="card">
+    <article class="card container">
       <div class="it-Header">
         <div class="col-sm-2">
           <%= image_tag("sibaken.jpg", size: "80x80",class: "avatar") %>
@@ -12,14 +12,15 @@
       <h1 class="syousai-title"><%= "#{@article.title}"  %></h1>
       <p class="honbun"><%= @article.text %></p>
     </article>
-    <div class="comment">
-      <div class="title">コメント</div>
-      <div class="container">
+    <div class="comment container">
+      <div class="title col-sm-12">コメント</div>
+      <div class="col-sm-12">
         <% @comments.each do |comment| %>
-          <div class="col-sm-2">
-            <%= image_tag("sibaken.jpg", size: "40x40",class: "avatar") %>
-          </div>
-          <h4 class="name"><%= comment.user.name %> <%= "#{time_ago_in_words(comment.created_at)} ago" %></h3>
+        <div class="col-sm-12 comment-user">
+          <%= image_tag("sibaken.jpg",class: "avatar col-sm-2") %>
+          <span class="name col-sm-3"><%= comment.user.name %></span>
+          <span class="time col-sm-5"><%= "#{time_ago_in_words(comment.created_at)} ago" %></span>
+        </div>
           <pre class="card">
             <div class="text">
               <%= comment.text %>

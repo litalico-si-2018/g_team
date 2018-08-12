@@ -1,6 +1,19 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.navbar-fixed-top {
-  background-color: white;
+body {
+  background-color: #faf0e6;
+}
+
+#logo {
+  color: white;
+  text-transform: none;
+}
+
+.navbar-right > li {
+  margin-right: 10px;
+}
+
+.menu-btn {
+  border: 1px white solid;
 }
