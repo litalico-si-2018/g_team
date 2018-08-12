@@ -7,7 +7,7 @@
           <li><%= link_to edit_user_path(current_user) do %>
             <button type="button" class="btn btn-outline-light menu-btn">マイページ</button>
           <% end %></li>
-          <li><%= link_to "#" do %>
+          <li><%= link_to edit_user_path(current_user) do %>
             <button type="button" class="btn btn-outline-light menu-btn">設定</button>
           <% end %></li>
         <% else %>

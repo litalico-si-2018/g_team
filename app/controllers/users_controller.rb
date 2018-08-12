@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @children = Child.where(user_id: params[:id])
   end
 
   def create
@@ -19,6 +20,16 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       render 'new'
+    end
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = "Profile updated"
+      redirect_to root_url
+    else
+      render 'edit'
     end
   end
 
