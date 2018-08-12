@@ -9,14 +9,18 @@ class StaticPagesController < ApplicationController
       top_match = top_matches(children, child)
       # @top_match = top_matches(children, child)
       top_match_id = []
+      @a = Array.new
       for i in 0..9
         top_match_id[i] = top_match[i][1].id
+        @a << Article.find_by(child_id: top_match[i][1].id)
+        # @a << top_match[i][1].id
       end
       articles = Article.where(child_id: top_match_id)
       # @articles = Article.where(child_id: top_match_id)
     end
 
-    @lists = articles
+    # @lists = articles
+    @lists = @a
   end
 
   def help

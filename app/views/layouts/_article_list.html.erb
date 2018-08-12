@@ -1,18 +1,20 @@
 <% @lists.each do |list| %>
-  <article class="row article-list">
-    <div class="col-sm-2">
-      <%= image_tag("sibaken.jpg", size: "80x80",class: "avatar") %>
-    </div>
-    <div class="col-sm-8">
-      <p class="title"><%= link_to(list.title, article_path(list.id)) %></p>
-      <div class="tags">
-        <div class="grade badge badge-info"><%= "小学#{list.grade}年生" %></div>
-        <div class="subject badge badge-success"><%= list.subject.name %></div>
+  <% if list.present? %>
+    <article class="row article-list">
+      <div class="col-sm-2">
+        <%= image_tag("sibaken.jpg", size: "80x80",class: "avatar") %>
       </div>
-      <time datetime="<%= list.created_at %>">
-        <%= "by #{list.child.user.name} #{time_ago_in_words(list.created_at)} ago" %>
-      </time>
-      <%= render "likes/like", article: list %>
-    </div>
-  </article>
+      <div class="col-sm-8">
+        <p class="title"><%= link_to(list.title, article_path(list.id)) %></p>
+        <div class="tags">
+          <div class="grade badge badge-info"><%= "小学#{list.grade}年生" %></div>
+          <div class="subject badge badge-success"><%= list.subject.name %></div>
+        </div>
+        <time datetime="<%= list.created_at %>">
+          <%= "by #{list.child.user.name} #{time_ago_in_words(list.created_at)} ago" %>
+        </time>
+        <%= render "likes/like", article: list %>
+      </div>
+    </article>
+  <% end %>
 <% end %>
