@@ -19,6 +19,9 @@ class StaticPagesController < ApplicationController
     @lists = articles
   end
 
+  def help
+  end
+
   private
 
   def sim_pearson(prefs, person1, person2)
@@ -63,6 +66,4 @@ class StaticPagesController < ApplicationController
     scores.sort.reverse[0,n] # スコアの降順にソートして返却
   end
 
-  def help
-  end
 end

@@ -1,4 +1,4 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-inverse bg-info">
   <div class="container">
     <%= link_to "Conavi", root_path, id: "logo" %>
     <nav>
@@ -19,8 +19,12 @@
               </ul>
             </li>
           <% else %>
-            <li><%= link_to "新規会員登録", logout_path %></li>
-            <li><%= link_to "ログイン", login_path %></li>
+            <li><%= link_to "#" do %>
+              <button type="button" class="btn btn-outline-light menu-btn">新機会員登録</button>
+            <% end %></li>
+            <li><%= link_to "#" do %>
+              <button type="button" class="btn btn-outline-light menu-btn">ログイン</button>
+            <% end %></li>
           <% end %>
       </ul>
     </nav>

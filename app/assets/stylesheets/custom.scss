@@ -120,19 +120,6 @@ footer {
 /* article */
 
 article {
-  margin-top: 5px;
-  width: 80%;
-  height: 120%;
-  
-  display: flex;
-  overflow: hidden;
-  flex-direction: row;
-  vertical-align: top;
-  border-bottom: 1px solid #e8e8e8;
-  margin: 0 auto;
-  // .container {
-  //   margin: 0 auto;
-  // }
   .avatar {
     padding: 8px 0;
     margin-right: 10px;
@@ -148,19 +135,18 @@ article {
     margin-bottom: 10px;
     padding-top: 5px;
   }
+  .small {
+    font-size: 16px;
+  }
+  .favorite-color {
+    color: #c82a00;
+  }
 }
 .comment {
   // 
   // flex-direction: row;
   // vertical-align: top;
   margin: 0 auto;
-  .title {
-    padding-top: 60px;
-    font-size: 2em;
-    border-bottom: 1px solid #e8e8e8;
-    text-align: center;
-    
-  }
   .container {
     margin-top: 10px;
   }

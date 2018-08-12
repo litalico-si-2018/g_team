@@ -1,5 +1,5 @@
+<ul class="list-group subject-list">
 <% for i in 1..6 do %>
-  <div class="card col-sm-2">
-    <p class="text"><%= link_to("小学#{i}年生", show_by_grade_path(i)) %></p>
-  </div>
+  <li class="list-group-item"><%= link_to("小学#{i}年生", show_by_grade_path(i)) %></li>
 <% end %>
+</ul>

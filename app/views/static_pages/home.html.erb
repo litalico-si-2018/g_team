@@ -1,15 +1,17 @@
 <% provide(:title, "Home") %>
 <!DOCTYPE html>
 <html>
-  <body>
-    <div class="container">
-      <div class="grades">
-        <%= render 'layouts/grades_list' %>
+  <body id="home">
+    <div class="row">
+      <div class="side_menu col-3">
+        <div class="grades">
+          <%= render 'layouts/grades_list' %>
+        </div>
+        <div class="subjects">
+          <%= render 'layouts/subjects_list' %>
+        </div>
       </div>
-      <div class="subjects">
-        <%= render 'layouts/subjects_list' %>
-      </div>
-      <div class="articles">
+      <div class="articles col-9">
         <%= render 'layouts/article_list' %>
       </div>
     </div>
