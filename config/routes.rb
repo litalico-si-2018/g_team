@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :users
   resources :articles
   resources :grades
+  resources :likes, only: [:create, :destroy]
 end
