@@ -44,7 +44,7 @@ end
 end
 
 # article
-for i in 1..11 do
+for i in 1..200 do
   Article.create!(
     title: "タイトル#{i.to_s}",
     child_id: rand(1..400),

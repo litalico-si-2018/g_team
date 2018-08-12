@@ -7,11 +7,13 @@ class StaticPagesController < ApplicationController
       child = Child.find_by(user_id: current_user.id)
       children = Child.all
       top_match = top_matches(children, child)
-      @top_match = top_matches(children, child)
-      articles = Article.where("(id = ?) OR (id = ?) OR (id = ?)",
-                               top_match[0][1].id, top_match[1][1], top_match[2][1])
-      # @articles = Article.where("(id = ?) OR (id = ?) OR (id = ?)",
-      #                           top_match[0][1].id, top_match[1][1], top_match[2][1])
+      # @top_match = top_matches(children, child)
+      top_match_id = []
+      for i in 0..9
+        top_match_id[i] = top_match[i][1].id
+      end
+      articles = Article.where(child_id: top_match_id)
+      # @articles = Article.where(child_id: top_match_id)
     end
 
     @lists = articles
@@ -50,7 +52,7 @@ class StaticPagesController < ApplicationController
     return num/den
   end
 
-  def top_matches(prefs, person, n=3, similarity=:sim_pearson)
+  def top_matches(prefs, person, n=10, similarity=:sim_pearson)
     scores = Array.new
     prefs.each do |child| # ハッシュを each して
       if child.id != person.id
