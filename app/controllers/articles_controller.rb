@@ -6,12 +6,12 @@ class ArticlesController < ApplicationController
 
   def show_by_grade
     @g = params[:id]
-    @article_grade = Article.where(grade: @g)
+    @article_filtered = Article.where(grade: @g)
   end
 
   def show_by_subject
     id = params[:id]
     @s = Subject.find_by(id: id)
-    @article_grade = Article.where(subject_id: @s)
+    @article_filtered = Article.where(subject_id: @s)
   end
 end
